@@ -1,0 +1,23 @@
+Netscaler Upgrade
+
+Create backup (via GUI)
+	System > Backup and Restore
+		Select Create
+		Filename - Backup-PrePatch-260723
+		Level: Full
+		Comment: ADC Upgrade to Build-XXX
+	Download Backup.
+
+Console/SSH to Netscaler.
+Ensure that /var/ exists, by shelling in Console and using command “ls ../var/“
+WinSCP .tgz to /var/
+On the console, use commands;
+	mkdir patch/build-13.1-49.13
+	mv build-13.1-49.13_nc_64.tgz build-13.1-49.13
+	cd build-13.1-49.13
+	tar -zxvf build-13.1.49.13_nc_64.tgz
+	./installns
+		Tap Y
+	Tap Y to reboot.
+	
+	
