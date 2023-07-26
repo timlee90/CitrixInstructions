@@ -17,8 +17,7 @@ On the console, use commands;
 	mv build-13.1-49.13_nc_64.tgz build-13.1-49.13_nc_64
 	cd build-13.1-49.13
 	tar -zxvf build-13.1.49.13_nc_64.tgz
-	./installns
-		Tap Y
+	./installns -Y
 	Tap Y to reboot.
 Wait for process to complete.
 	
